@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "product_id": "funeral",
+  "product_name": "FuneralTasksAI",
+  "official_domain": "funeraltasksai.com",
+  "official_github_repo": "https://github.com/laudoluxDev/funeraltasksai-mcp",
+  "official_package": "@tasksai/install",
+  "installer": {
+    "preferred": "npx",
+    "npx": {
+      "command": "npx",
+      "args": [
+        "@tasksai/install",
+        "funeral",
+        "--source",
+        "https://github.com/laudoluxDev/funeraltasksai-mcp"
+      ],
+      "requires": [
+        "node",
+        "npm",
+        "npx"
+      ]
+    }
+  },
+  "supported_clients": [
+    "claude_desktop",
+    "cursor",
+    "windsurf",
+    "codex"
+  ],
+  "auth": {
+    "method": "browser_device_flow",
+    "connect_url": "https://funeraltasksai.com/connect",
+    "fallback": "license_key"
+  },
+  "security": {
+    "require_domain_verification": true,
+    "require_repo_verification": true,
+    "disallow_arbitrary_manifest_commands": true,
+    "native_installer_user_approval_required": true
+  },
+  "health_check": {
+    "command": "npx",
+    "args": [
+      "@tasksai/install",
+      "funeral",
+      "doctor"
+    ]
+  },
+  "uninstall": {
+    "command": "npx",
+    "args": [
+      "@tasksai/install",
+      "funeral",
+      "uninstall"
+    ]
+  },
+  "support": {
+    "url": "https://funeraltasksai.com/support",
+    "email": "support@funeraltasksai.com"
+  }
+}
